@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+*.egg-info/
+
+# Data -- large and fully regeneratable via download_data.py / download_bpcc.py
+# / rebalance_data.py. Don't commit raw or processed corpora.
+data/raw/
+data/processed/
+data/split/
+data/eval/
+
+# Trained model checkpoints -- exceed GitHub's file size limits.
+# Host the final checkpoint externally (Drive/HF) and link it in the
+# relevant model's README instead.
+**/checkpoints/*.pt
+
+# Downloaded archives (opus_read's own cache byproducts)
+*.zip
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store

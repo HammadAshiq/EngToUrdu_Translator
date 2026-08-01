@@ -1,0 +1,10 @@
+torch
+numpy
+sentencepiece
+opustools
+tqdm
+datasets
+sacrebleu
+matplotlib
+huggingface_hub
+ipykernel
