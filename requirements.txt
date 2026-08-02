@@ -1,3 +1,11 @@
+# torch needs to come from PyTorch's CUDA 12.1 build index, not plain PyPI --
+# plain PyPI's latest torch release may bundle a newer CUDA runtime (e.g. 13.x)
+# than your GPU driver supports, causing "CUDA initialization: driver too old"
+# even though the GPU and driver are fine. --extra-index-url ADDS this index
+# alongside PyPI (rather than replacing it) so the other packages below still
+# resolve normally.
+--extra-index-url https://download.pytorch.org/whl/cu121
+
 torch
 numpy
 sentencepiece
